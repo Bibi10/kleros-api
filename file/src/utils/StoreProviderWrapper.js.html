@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/utils/StoreProviderWrapper.js | kleros-api</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A Javascript library that makes it easy to build relayers and other DApps that use the Kleros protocol."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="kleros-api"><meta property="twitter:description" content="A Javascript library that makes it easy to build relayers and other DApps that use the Kleros protocol."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/kleros.js~Kleros.html">Kleros</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts">contracts</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/AbstractContract.js~AbstractContract.html">AbstractContract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/ContractImplementation.js~ContractImplementation.html">ContractImplementation</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts-abstractions">contracts/abstractions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/abstractions/Arbitrable.js~ArbitrableContract.html">ArbitrableContract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/abstractions/Arbitrator.js~Arbitrator.html">Arbitrator</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts-implementations-pnk">contracts/implementations/PNK</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/implementations/PNK/PinakionPOC.js~PinakionPOC.html">PinakionPOC</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts-implementations-rng">contracts/implementations/RNG</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/implementations/RNG/BlockHashRNG.js~BlockHashRNG.html">BlockHashRNG</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts-implementations-arbitrable">contracts/implementations/arbitrable</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/implementations/arbitrable/ArbitrableTransaction.js~ArbitrableTransaction.html">ArbitrableTransaction</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#contracts-implementations-arbitrator">contracts/implementations/arbitrator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/contracts/implementations/arbitrator/KlerosPOC.js~KlerosPOC.html">KlerosPOC</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#resources">resources</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/resources/Disputes.js~Disputes.html">Disputes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/resources/Notifications.js~Notifications.html">Notifications</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/EventListener.js~EventListener.html">EventListener</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/StoreProviderWrapper.js~StoreProviderWrapper.html">StoreProviderWrapper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/Web3Wrapper.js~Web3Wrapper.html">Web3Wrapper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-PromiseQueue">PromiseQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-delegateCalls">delegateCalls</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-deployContractAsync">deployContractAsync</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isRequired">isRequired</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/utils/StoreProviderWrapper.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import _ from &apos;lodash&apos;
+
+import * as errorConstants from &apos;../../constants/error&apos;
+
+import PromiseQueue from &apos;./PromiseQueue&apos;
+
+/**
+ * A wrapper for interacting with Kleros Store.
+ */
+class StoreProviderWrapper {
+  /**
+   * Create a new instance of StoreProviderWrapper.
+   * @param {string} storeProviderUri - The uri of kleros store.
+   */
+  constructor(storeProviderUri) {
+    this._storeUri = storeProviderUri
+    this._storeQueue = new PromiseQueue()
+  }
+
+  /**
+   * Helper method for sending an http request to kleros store.
+   * @param {string} verb - HTTP verb to be used in request. E.g. GET, POST, PUT.
+   * @param {string} uri - The uri to send the request to.
+   * @param {string} body - json string of the body.
+   * @returns {Promise} request promise that resolves to the HTTP response.
+   */
+  _makeRequest = (verb, uri, body = null) =&gt; {
+    const httpRequest = new XMLHttpRequest()
+    return new Promise((resolve, reject) =&gt; {
+      try {
+        httpRequest.open(verb, uri, true)
+        if (body) {
+          httpRequest.setRequestHeader(
+            &apos;Content-Type&apos;,
+            &apos;application/json;charset=UTF-8&apos;
+          )
+        }
+        httpRequest.onreadystatechange = () =&gt; {
+          if (httpRequest.readyState === 4) {
+            let body = null
+            try {
+              body = JSON.parse(httpRequest.responseText)
+              // eslint-disable-next-line no-unused-vars
+            } catch (err) {}
+            resolve({
+              body: body,
+              status: httpRequest.status
+            })
+          }
+        }
+        httpRequest.send(body)
+      } catch (err) {
+        reject(err)
+      }
+    })
+  }
+
+  /**
+   * use the queue for write request. this allows a function to be passed so we can read immediately before we write
+   * @param {fn} getBodyFn async function to call before we write. Should to reads and return JSON to be used as body.
+   * @param {string} verb POST or PUT
+   * @param {string} uri uri to call
+   * @returns {promise} promise that returns result of request. wait on this if you need it to be syncronous
+   */
+  queueWriteRequest = (getBodyFn, verb, uri = null) =&gt;
+    this._storeQueue.fetch(() =&gt;
+      getBodyFn().then(result =&gt; this._makeRequest(verb, uri, result))
+    )
+
+  /**
+   * If we know we are waiting on some other write before we want to read we can add a read request to the end of the queue.
+   * @param {string} uri uri to hit
+   * @returns {Promise} promise of the result function
+   */
+  queueReadRequest = uri =&gt;
+    this._storeQueue.fetch(() =&gt; this._makeRequest(&apos;GET&apos;, uri))
+
+  // **************************** //
+  // *          Read            * //
+  // **************************** //
+
+  /**
+   * Fetch stored user profile.
+   * @param {string} userAddress - Address of user.
+   * @returns {object} - a response object.
+   */
+  getUserProfile = async userAddress =&gt; {
+    const httpResponse = await this._makeRequest(
+      &apos;GET&apos;,
+      `${this._storeUri}/${userAddress}`
+    )
+
+    return httpResponse.body
+  }
+
+  /**
+   * Get all stored data from a dispute. This includes data from the user profile as well
+   * as the user agnostic dispute data stored separately.
+   * @param {string} arbitratorAddress - Address of arbitrator contract.
+   * @param {number} disputeId - Index of the dispute.
+   * @param {string} userAddress - Address of user.
+   * @returns {object} - a response object.
+   */
+  getDisputeData = async (arbitratorAddress, disputeId, userAddress) =&gt; {
+    const userProfile = await this.getUserProfile(userAddress)
+    if (!userProfile)
+      throw new Error(errorConstants.PROFILE_NOT_FOUND(userAddress))
+
+    let disputeData = _.filter(
+      userProfile.disputes,
+      o =&gt;
+        o.arbitratorAddress === arbitratorAddress &amp;&amp; o.disputeId === disputeId
+    )
+
+    const httpResponse = await this._makeRequest(
+      &apos;GET&apos;,
+      `${this._storeUri}/arbitrators/${arbitratorAddress}/disputes/${disputeId}`
+    )
+    return Object.assign({}, httpResponse.body, disputeData[0])
+  }
+
+  /**
+   * Fetch stored data on a contract for a user.
+   * @param {string} userAddress - Address of the user.
+   * @param {string} addressContract - The address of the contract.
+   * @returns {object} - Contact data.
+   */
+  getContractByAddress = async (userAddress, addressContract) =&gt; {
+    const userProfile = await this.getUserProfile(userAddress)
+    if (!userProfile)
+      throw new Error(errorConstants.PROFILE_NOT_FOUND(userAddress))
+
+    let contract = _.filter(
+      userProfile.contracts,
+      contract =&gt; contract.address === addressContract
+    )
+
+    return contract[0]
+  }
+
+  /**
+   * Fetch stored disputes for a user.
+   * @param {string} userAddress - Address of user.
+   * @returns {object} - a response object.
+   */
+  getDisputesForUser = async userAddress =&gt; {
+    const userProfile = await this.getUserProfile(userAddress)
+    if (!userProfile) return []
+
+    const disputes = []
+    for (let i = 0; i &lt; userProfile.disputes.length; i++) {
+      const dispute = userProfile.disputes[i]
+      if (!dispute.arbitratorAddress || _.isNil(dispute.disputeId)) continue
+      // fetch dispute data
+      const httpResponse = await this._makeRequest(
+        &apos;GET&apos;,
+        `${this._storeUri}/arbitrators/${dispute.arbitratorAddress}/disputes/${
+          dispute.disputeId
+        }`
+      )
+      if (httpResponse.status === 200) {
+        disputes.push(Object.assign({}, httpResponse.body, dispute))
+      }
+    }
+
+    return disputes
+  }
+
+  /**
+   * Fetch the last block seen for a user. This is commonly used with EventListerer.
+   * @param {string} userAddress - Address of user.
+   * @returns {number} The last block number.
+   */
+  getLastBlock = async userAddress =&gt; {
+    const userProfile = await this.getUserProfile(userAddress)
+
+    return userProfile.lastBlock || 0
+  }
+
+  /**
+   * Fetch user agnostic data stored on a dispute
+   * @param {string} arbitratorAddress - The address of the arbitrator contract.
+   * @param {number} disputeId - The index of the dispute.
+   * @returns {object} - a response object.
+   */
+  getDispute = async (arbitratorAddress, disputeId) =&gt; {
+    const httpResponse = await this._makeRequest(
+      &apos;GET&apos;,
+      `${this._storeUri}/arbitrators/${arbitratorAddress}/disputes/${disputeId}`
+    )
+
+    return httpResponse.body
+  }
+
+  // **************************** //
+  // *          Write           * //
+  // **************************** //
+
+  /**
+   * Update user profile. WARNING: This should only be used for session and lastBlock.
+   * Overwriting arrays of unstructured data can lead to data loss.
+   * @param {string} userAddress - users userAddress
+   * @param {object} params - object containing kwargs to update
+   * @returns {promise} - resulting profile
+   */
+  updateUserProfile = (userAddress, params = {}) =&gt; {
+    const getBodyFn = async () =&gt; {
+      const currentProfile = (await this.getUserProfile(userAddress)) || {}
+      delete currentProfile._id
+      delete currentProfile.created_at
+
+      params.address = userAddress
+
+      return JSON.stringify({ ...currentProfile, ...params })
+    }
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/${userAddress}`
+    )
+  }
+
+  /**
+   * Set up a new user profile if one does not exist.
+   * @param {string} userAddress - user&apos;s address
+   * @returns {object} - users existing or created profile
+   */
+  setUpUserProfile = async userAddress =&gt; {
+    let userProfile = await this.getUserProfile(userAddress)
+    if (_.isNull(userProfile)) {
+      this.updateUserProfile(userAddress, {})
+      userProfile = await this.queueReadRequest(
+        `${this._storeUri}/${userAddress}`
+      )
+    }
+
+    return userProfile
+  }
+
+  /**
+   * Update the stored data on a contract for a user.
+   * @param {string} userAddress - The user&apos;s address.
+   * @param {string} contractAddress - The address of the contract.
+   * @param {object} params - Params we want to update.
+   * @returns {Promise} - The resulting contract data.
+   */
+  updateContract = (userAddress, contractAddress, params) =&gt; {
+    const getBodyFn = async () =&gt; {
+      let currentContractData = await this.getContractByAddress(
+        userAddress,
+        contractAddress
+      )
+      if (!currentContractData) currentContractData = {}
+      delete currentContractData._id
+
+      params.address = contractAddress
+
+      return JSON.stringify({ ...currentContractData, ...params })
+    }
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/${userAddress}/contracts/${contractAddress}`
+    )
+  }
+
+  /**
+   * Adds new evidence to the store for a users contract. NOTE this will only update the
+   * stored evidence for the specified user, not all parties of the dispute.
+   * @param {string} contractAddress - Address of the contract
+   * @param {string} userAddress - Address of the user.
+   * @param {string} name - Name of evidence.
+   * @param {string} description - Description of evidence.
+   * @param {string} url - A link to the evidence.
+   * @returns {Promise} - The resulting evidence data.
+   */
+  addEvidenceContract = (
+    contractAddress,
+    userAddress,
+    name,
+    description,
+    url
+  ) =&gt; {
+    // get timestamp for submission
+    const submittedAt = new Date().getTime()
+
+    const getBodyFn = () =&gt;
+      new Promise(resolve =&gt;
+        resolve(
+          JSON.stringify({
+            name,
+            description,
+            url,
+            submittedAt
+          })
+        )
+      )
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/${userAddress}/contracts/${contractAddress}/evidence`
+    )
+  }
+
+  /**
+   * Update stored dispute data for a user.
+   * @param {string} userAddress - The address of the user.
+   * @param {string} arbitratorAddress - The address of the arbitrator contract.
+   * @param {number} disputeId - The index of the dispute.
+   * @param {object} params - The dispute data we are updating.
+   * @returns {Promise} The resulting dispute data.
+   */
+  updateDisputeProfile = (
+    userAddress,
+    arbitratorAddress,
+    disputeId,
+    params
+  ) =&gt; {
+    const getBodyFn = async () =&gt; {
+      const userProfile = await this.getUserProfile(userAddress)
+
+      const disputeIndex = _.filter(
+        userProfile.disputes,
+        dispute =&gt;
+          dispute.arbitratorAddress === arbitratorAddress &amp;&amp;
+          dispute.disputeId === disputeId
+      )
+
+      const currentDisputeProfile = userProfile.disputes[disputeIndex] || {}
+      delete currentDisputeProfile._id
+      // set these so if it is a new dispute they are included
+      params.disputeId = disputeId
+      params.arbitratorAddress = arbitratorAddress
+
+      return JSON.stringify({ ...currentDisputeProfile, ...params })
+    }
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${
+        this._storeUri
+      }/${userAddress}/arbitrators/${arbitratorAddress}/disputes/${disputeId}`
+    )
+  }
+
+  /**
+   * Update the user agnostic data on a dispute.
+   * @param {string} arbitratorAddress - The address of the arbitrator contract.
+   * @param {number} disputeId - The index of the dispute.
+   * @param {object} params - The data we are updating.
+   * @returns {Promise} The resulting dispute data.
+   */
+  updateDispute = async (arbitratorAddress, disputeId, params) =&gt; {
+    const getBodyFn = async () =&gt; {
+      const currentDispute =
+        (await this.getDispute(arbitratorAddress, disputeId)) || {}
+      delete currentDispute._id
+      delete currentDispute.updated_at
+
+      params.arbitratorAddress = arbitratorAddress
+      params.disputeId = disputeId
+
+      return JSON.stringify({ ...currentDispute, ...params })
+    }
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/arbitrators/${arbitratorAddress}/disputes/${disputeId}`
+    )
+  }
+
+  /**
+   * Create a new notification in the store.
+   * @param {string} userAddress - The address of the user.
+   * @param {string} txHash - The transaction hash which produced this event log. Used as an identifier.
+   * @param {number} logIndex - The index of the log in the transaction. Used as an identifier.
+   * @param {number} notificationType - The type of the notification. See constants/notification.
+   * @param {string} message - The message to be stored with the notification.
+   * @param {object} data - Any extra data stored with the notification.
+   * @param {boolean} read - If the notification has been read or not.
+   * @returns {Promise} - The resulting notification.
+   */
+  newNotification = async (
+    userAddress,
+    txHash,
+    logIndex,
+    notificationType,
+    message = &apos;&apos;,
+    data = {},
+    read = false
+  ) =&gt; {
+    const getBodyFn = () =&gt;
+      new Promise(resolve =&gt;
+        resolve(
+          JSON.stringify({
+            notificationType,
+            logIndex,
+            read,
+            message,
+            data
+          })
+        )
+      )
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/${userAddress}/notifications/${txHash}`
+    )
+  }
+
+  /**
+   * Create a new notification in the store.
+   * @param {string} userAddress - The address of the user.
+   * @param {string} txHash - The transaction hash which produced this event log. Used as an identifier.
+   * @param {number} logIndex - The index of the log in the transaction. Used as an identifier.
+   * @param {boolean} isRead - If the notification has been read or not.
+   * @returns {Promise} - The resulting notification.
+   */
+  markNotificationAsRead = async (
+    userAddress,
+    txHash,
+    logIndex,
+    isRead = true
+  ) =&gt; {
+    const getBodyFn = async () =&gt; {
+      const userProfile = await this.getUserProfile(userAddress)
+
+      const notificationIndex = await _.findIndex(
+        userProfile.notifications,
+        notification =&gt;
+          notification.txHash === txHash &amp;&amp; notification.logIndex === logIndex
+      )
+
+      if (_.isNull(notificationIndex))
+        throw new Error(errorConstants.NOTIFICATION_NOT_FOUND(txHash))
+
+      userProfile.notifications[notificationIndex].read = isRead
+      delete userProfile._id
+      delete userProfile.created_at
+      return JSON.stringify(userProfile)
+    }
+
+    return this.queueWriteRequest(
+      getBodyFn,
+      &apos;POST&apos;,
+      `${this._storeUri}/${userAddress}`
+    )
+  }
+}
+
+export default StoreProviderWrapper
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
